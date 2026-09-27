@@ -1,0 +1,19 @@
+# Secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Project data / generated outputs
+data/
+notes/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
