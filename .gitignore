@@ -17,3 +17,7 @@ notes/
 .idea/
 .DS_Store
 Thumbs.db
+
+# raw data files
+.png
+.pdf

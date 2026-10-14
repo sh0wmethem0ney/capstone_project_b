@@ -8,12 +8,11 @@ This patch replaces the manual Azure Document Intelligence Studio step:
 4. Download JSON
 5. Rename it to `bird_form_XXX_upper_read.json`
 
-with a Python API call.
+with an API call
 
 ## Existing project structure used by this patch
 
-```text
-C:\Users\lemon\capstone
+Your Local Project Directory
 ├─ data
 │  ├─ cropped_fields
 │  │  └─ bird_form_001_upper_section.png
@@ -40,63 +39,53 @@ C:\Users\lemon\capstone
 
 From PowerShell:
 
-```powershell
-cd C:\Users\lemon\capstone
+powershell
+cd Your Local Project Directory
 python -m pip install -r requirements-azure.txt
-```
 
-If `python` is not the interpreter you use, run it with your existing Python 3.11 executable.
 
 ## 2. Create `.env`
 
 Copy `.env.example` to `.env`:
 
-```powershell
+powershell
 Copy-Item .env.example .env
-```
 
 Then enter the Azure endpoint and API key.
 
 Example shape:
 
-```text
 AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT=https://xxxx.cognitiveservices.azure.com/
 AZURE_DOCUMENT_INTELLIGENCE_KEY=xxxxxxxx
 AZURE_DOCUMENT_INTELLIGENCE_MODEL=prebuilt-read
-```
 
-Do not commit `.env`.
+
+***@@@Do not commit `.env`.@@@***
 
 Add this to `.gitignore` if it is not already there:
 
-```text
 .env
-```
 
 ## 3. Test only the Azure replacement step
 
 Assuming this exists:
 
-```text
 data\cropped_fields\bird_form_002_upper_section.png
-```
 
 run:
 
-```powershell
+powershell
 python src\ocr\azure_read.py bird_form_002
-```
+
 
 The script automatically creates:
 
-```text
+
 data\azure_results\bird_form_002_upper_read.json
-```
 
 The output is wrapped in the same structure expected by the existing
 postprocessor:
 
-```json
 {
   "status": "succeeded",
   "analyzeResult": {
@@ -115,17 +104,13 @@ postprocessor:
     ]
   }
 }
-```
 
 ## 4. Run Azure + existing post-processing
 
-```powershell
 python run_pipeline.py bird_form_002
-```
 
 Flow:
 
-```text
 data/cropped_fields/bird_form_002_upper_section.png
         ↓
 Azure Document Intelligence API
@@ -135,41 +120,31 @@ data/azure_results/bird_form_002_upper_read.json
 src/postprocessing/anchor_based_simplified_json.py
         ↓
 data/simplified_outputs/bird_form_002_simplified.json
-```
 
 ## 5. Process multiple forms
 
-```powershell
 python run_pipeline.py bird_form_001 bird_form_002
-```
 
 No source-code edit is required for each new form as long as the input follows:
 
-```text
 {FORM_ID}_upper_section.png
-```
 
-## 6. Re-run Azure for an existing form
+## 6. Re-run Azure
 
 By default, an existing Azure JSON file is skipped to avoid unnecessary API calls/cost.
 
 To force a new request:
 
-```powershell
 python run_pipeline.py bird_form_002 --force-azure
-```
 
 ## 7. Include the existing evaluation step
 
-```powershell
 python run_pipeline.py bird_form_002 --evaluate
-```
 
 This additionally invokes:
 
-```text
 src/evaluation/accuracy_form.py bird_form_002
-```
+
 
 ## Important
 
@@ -177,15 +152,13 @@ This patch starts at the cropped image because that is the exact point where
 the current manual Azure Studio workflow begins. It does not change the
 existing preprocessing/cropping code.
 
-A later refactor can connect:
+A later refactor may connect:
 
-```text
 raw form
 → preprocessing
 → cropping
 → Azure API
 → simplified JSON
 → validation/evaluation
-```
 
 into one command.
