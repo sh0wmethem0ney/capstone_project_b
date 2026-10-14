@@ -18,5 +18,5 @@ notes/
 Thumbs.db
 
 # raw data files
-.png
-.pdf
+*.png
+*.pdf
