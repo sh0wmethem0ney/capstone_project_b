@@ -8,8 +8,7 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Project data / generated outputs
-data/
+# personal project notes
 notes/
 
 # IDE / OS

@@ -1,0 +1,11 @@
+﻿form_id,field_name,manual_value,model_value,confidence,flag,match_status,similarity,error_type
+bird_form_002,member_number,20017,20017,0.989,,correct,1.0,exact_match
+bird_form_002,name,Rob Cooper,Ris Cooper,0.651,low_confidence,partial,0.8,text_partial_match
+bird_form_002,number_of_species_recorded,47,47,0.945,,correct,1.0,exact_match
+bird_form_002,latitude_degrees,31,3,0.998,,incorrect,0.667,value_mismatch
+bird_form_002,latitude_minutes,5,05,0.993,,incorrect,0.667,value_mismatch
+bird_form_002,longitude_degrees,153,153,0.879,,correct,1.0,exact_match
+bird_form_002,longitude_minutes,5,05,0.988,,incorrect,0.667,value_mismatch
+bird_form_002,location_description,Hat Head,Hat Head,0.967,,correct,1.0,exact_match
+bird_form_002,first_date,14/5/25,14/5/25,0.609,low_confidence,correct,1.0,date_match
+bird_form_002,last_day,16/5/25,16/5/25,0.951,,correct,1.0,date_match

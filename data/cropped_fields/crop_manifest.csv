@@ -1,0 +1,11 @@
+form_id,source_file,page,crop_region,output_file,dpi,crop_left,crop_top,crop_right,crop_bottom,bottom_ratio
+bird_form_001,bird_form_001.pdf,front,upper_section,data\cropped_fields\bird_form_001_upper_section.png,300,0,0,2481,982,0.28
+bird_form_002,bird_form_002.pdf,front,upper_section,data\cropped_fields\bird_form_002_upper_section.png,300,0,0,2481,982,0.28
+bird_form_003,bird_form_003.pdf,front,upper_section,data\cropped_fields\bird_form_003_upper_section.png,300,0,0,2481,982,0.28
+bird_form_004,bird_form_004.pdf,front,upper_section,data\cropped_fields\bird_form_004_upper_section.png,300,0,0,2481,982,0.28
+bird_form_005,bird_form_005.pdf,front,upper_section,data\cropped_fields\bird_form_005_upper_section.png,300,0,0,2481,982,0.28
+bird_form_006,bird_form_006.pdf,front,upper_section,data\cropped_fields\bird_form_006_upper_section.png,300,0,0,2481,982,0.28
+bird_form_007,bird_form_007.pdf,front,upper_section,data\cropped_fields\bird_form_007_upper_section.png,300,0,0,2481,982,0.28
+bird_form_008,bird_form_008.pdf,front,upper_section,data\cropped_fields\bird_form_008_upper_section.png,300,0,0,2481,982,0.28
+bird_form_009,bird_form_009.pdf,front,upper_section,data\cropped_fields\bird_form_009_upper_section.png,300,0,0,2481,982,0.28
+bird_form_010,bird_form_010.pdf,front,upper_section,data\cropped_fields\bird_form_010_upper_section.png,300,0,0,2481,982,0.28

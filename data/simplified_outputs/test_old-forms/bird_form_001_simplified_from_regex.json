@@ -1,0 +1,66 @@
+{
+  "form_id": "bird_form_001",
+  "source_file": "bird_form_001.pdf",
+  "processed_region": "upper_section",
+  "preprocessing": {
+    "crop_method": "automatic upper-section crop",
+    "crop_bottom_ratio": 0.26,
+    "dpi": 300
+  },
+  "model": {
+    "provider": "Azure Document Intelligence",
+    "model_id": "prebuilt-read"
+  },
+  "extracted_fields": {
+    "member_number": {
+      "value": "26196",
+      "confidence": 0.974,
+      "flag": null
+    },
+    "number_of_species_recorded": {
+      "value": "7$",
+      "confidence": 0.669,
+      "flag": "low_accuracy"
+    },
+    "name": {
+      "value": "boff allesson",
+      "confidence": 0.669,
+      "flag": "low_accuracy"
+    },
+    "latitude_degrees": {
+      "value": "30",
+      "confidence": 0.998,
+      "flag": null
+    },
+    "latitude_minutes": {
+      "value": "55",
+      "confidence": 0.961,
+      "flag": null
+    },
+    "longitude_degrees": {
+      "value": "153",
+      "confidence": 0.949,
+      "flag": null
+    },
+    "longitude_minutes": {
+      "value": "05",
+      "confidence": 0.988,
+      "flag": null
+    },
+    "first_date": {
+      "value": "11/2/26",
+      "confidence": 0.732,
+      "flag": null
+    },
+    "last_day": {
+      "value": "",
+      "confidence": null,
+      "flag": "blank_or_not_detected"
+    },
+    "location_description": {
+      "value": "South West Rocks Macklay Rua 1",
+      "confidence": 0.607,
+      "flag": "low_accuracy"
+    }
+  }
+}

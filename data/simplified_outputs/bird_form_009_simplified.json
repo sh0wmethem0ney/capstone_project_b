@@ -1,0 +1,67 @@
+{
+  "form_id": "bird_form_009",
+  "source_file": "bird_form_009_upper_section.pdf",
+  "processed_region": "upper_section",
+  "extraction_method": "anchor_based_region",
+  "preprocessing": {
+    "crop_method": "automatic upper-section crop",
+    "crop_bottom_ratio": 0.28,
+    "dpi": 300
+  },
+  "model": {
+    "provider": "Azure Document Intelligence",
+    "model_id": "prebuilt-read"
+  },
+  "extracted_fields": {
+    "member_number": {
+      "value": "20017",
+      "confidence": 0.896,
+      "flag": null
+    },
+    "number_of_species_recorded": {
+      "value": "39 35",
+      "confidence": 0.965,
+      "flag": null
+    },
+    "name": {
+      "value": "coola",
+      "confidence": 0.632,
+      "flag": "low_confidence"
+    },
+    "latitude_degrees": {
+      "value": "29",
+      "confidence": 0.994,
+      "flag": null
+    },
+    "latitude_minutes": {
+      "value": "35",
+      "confidence": 0.996,
+      "flag": null
+    },
+    "longitude_degrees": {
+      "value": "150",
+      "confidence": 0.998,
+      "flag": null
+    },
+    "longitude_minutes": {
+      "value": "35",
+      "confidence": 0.95,
+      "flag": null
+    },
+    "first_date": {
+      "value": "3/5/25",
+      "confidence": 0.868,
+      "flag": null
+    },
+    "last_day": {
+      "value": "1/5/25",
+      "confidence": 0.672,
+      "flag": "low_confidence"
+    },
+    "location_description": {
+      "value": "WARIALDA",
+      "confidence": 0.924,
+      "flag": null
+    }
+  }
+}

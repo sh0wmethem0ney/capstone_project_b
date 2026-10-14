@@ -1,0 +1,67 @@
+{
+  "form_id": "bird_form_010",
+  "source_file": "bird_form_010_upper_section.pdf",
+  "processed_region": "upper_section",
+  "extraction_method": "anchor_based_region",
+  "preprocessing": {
+    "crop_method": "automatic upper-section crop",
+    "crop_bottom_ratio": 0.28,
+    "dpi": 300
+  },
+  "model": {
+    "provider": "Azure Document Intelligence",
+    "model_id": "prebuilt-read"
+  },
+  "extracted_fields": {
+    "member_number": {
+      "value": "20017",
+      "confidence": 0.878,
+      "flag": null
+    },
+    "number_of_species_recorded": {
+      "value": "68",
+      "confidence": 0.993,
+      "flag": null
+    },
+    "name": {
+      "value": "RTB Cacher",
+      "confidence": 0.327,
+      "flag": "low_confidence"
+    },
+    "latitude_degrees": {
+      "value": "30",
+      "confidence": 0.686,
+      "flag": "low_confidence"
+    },
+    "latitude_minutes": {
+      "value": "05",
+      "confidence": 0.996,
+      "flag": null
+    },
+    "longitude_degrees": {
+      "value": "15",
+      "confidence": 0.992,
+      "flag": null
+    },
+    "longitude_minutes": {
+      "value": "",
+      "confidence": null,
+      "flag": "blank_or_not_detected"
+    },
+    "first_date": {
+      "value": "1/7/25",
+      "confidence": 0.926,
+      "flag": null
+    },
+    "last_day": {
+      "value": "31/7/25",
+      "confidence": 0.951,
+      "flag": null
+    },
+    "location_description": {
+      "value": "Woolgoolga",
+      "confidence": 0.577,
+      "flag": "low_confidence"
+    }
+  }
+}

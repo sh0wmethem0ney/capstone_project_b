@@ -1,0 +1,2 @@
+﻿form_id,evaluated_fields,correct,partial,incorrect,not_detected,exact_accuracy,relaxed_accuracy_correct_or_partial
+bird_form_004,10,8,2,0,0,0.8,1.0

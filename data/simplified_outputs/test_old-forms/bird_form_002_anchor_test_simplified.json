@@ -1,0 +1,67 @@
+{
+  "form_id": "bird_form_002",
+  "source_file": "bird_form_002.pdf",
+  "processed_region": "upper_section",
+  "extraction_method": "anchor_based_region_test",
+  "preprocessing": {
+    "crop_method": "automatic upper-section crop",
+    "crop_bottom_ratio": 0.26,
+    "dpi": 300
+  },
+  "model": {
+    "provider": "Azure Document Intelligence",
+    "model_id": "prebuilt-read"
+  },
+  "extracted_fields": {
+    "member_number": {
+      "value": "20017",
+      "confidence": 0.989,
+      "flag": null
+    },
+    "number_of_species_recorded": {
+      "value": "47",
+      "confidence": 0.945,
+      "flag": null
+    },
+    "name": {
+      "value": "Ris Cooper",
+      "confidence": 0.651,
+      "flag": "low_confidence"
+    },
+    "latitude_degrees": {
+      "value": "3",
+      "confidence": 0.998,
+      "flag": null
+    },
+    "latitude_minutes": {
+      "value": "05",
+      "confidence": 0.993,
+      "flag": null
+    },
+    "longitude_degrees": {
+      "value": "153",
+      "confidence": 0.879,
+      "flag": null
+    },
+    "longitude_minutes": {
+      "value": "05",
+      "confidence": 0.988,
+      "flag": null
+    },
+    "first_date": {
+      "value": "14/5/25",
+      "confidence": 0.609,
+      "flag": "low_confidence"
+    },
+    "last_day": {
+      "value": "16/5/25",
+      "confidence": 0.951,
+      "flag": null
+    },
+    "location_description": {
+      "value": "Hat Head",
+      "confidence": 0.967,
+      "flag": null
+    }
+  }
+}

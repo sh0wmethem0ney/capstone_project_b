@@ -1,0 +1,11 @@
+﻿form_id,field_name,manual_value,model_value,confidence,flag,match_status,similarity,error_type
+bird_form_009,member_number,20017,20017,0.896,,correct,1.0,exact_match
+bird_form_009,name,Cooper,coola,0.632,low_confidence,incorrect,0.545,value_mismatch
+bird_form_009,number_of_species_recorded,39,39 35,0.965,,incorrect,0.571,value_mismatch
+bird_form_009,latitude_degrees,29,29,0.994,,correct,1.0,exact_match
+bird_form_009,latitude_minutes,35,35,0.996,,correct,1.0,exact_match
+bird_form_009,longitude_degrees,150,150,0.998,,correct,1.0,exact_match
+bird_form_009,longitude_minutes,35,35,0.95,,correct,1.0,exact_match
+bird_form_009,location_description,WARIALDA,WARIALDA,0.924,,correct,1.0,exact_match
+bird_form_009,first_date,3/5/25,3/5/25,0.868,,correct,1.0,date_match
+bird_form_009,last_day,4/5/25,1/5/25,0.672,low_confidence,incorrect,0.833,value_mismatch

@@ -1,0 +1,11 @@
+﻿form_id,field_name,manual_value,model_value,confidence,flag,match_status,similarity,error_type
+bird_form_007,member_number,20196,26196,0.994,,incorrect,0.8,value_mismatch
+bird_form_007,name,Ralph Atkinson,Coffs atlessens,0.493,low_confidence,incorrect,0.345,value_mismatch
+bird_form_007,number_of_species_recorded,68,68 55,0.992,,incorrect,0.571,value_mismatch
+bird_form_007,latitude_degrees,29,29,0.996,,correct,1.0,exact_match
+bird_form_007,latitude_minutes,55,55,0.987,,correct,1.0,exact_match
+bird_form_007,longitude_degrees,153,153,0.997,,correct,1.0,exact_match
+bird_form_007,longitude_minutes,15,15,0.995,,correct,1.0,exact_match
+bird_form_007,location_description,Wooli / Red Rock.,Wool/ Red Rock.,0.854,,partial,0.938,text_partial_match
+bird_form_007,first_date,11/6/25,,,blank_or_not_detected,not_detected,0.0,model_value_empty
+bird_form_007,last_day,,,,blank_or_not_detected,correct,1.0,blank_match

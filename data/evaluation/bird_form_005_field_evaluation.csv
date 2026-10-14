@@ -1,0 +1,11 @@
+﻿form_id,field_name,manual_value,model_value,confidence,flag,match_status,similarity,error_type
+bird_form_005,member_number,20017,20017,0.892,,correct,1.0,exact_match
+bird_form_005,name,Cooper,Coop,0.506,low_confidence,partial,0.8,text_partial_match
+bird_form_005,number_of_species_recorded,19,19,0.99,,correct,1.0,exact_match
+bird_form_005,latitude_degrees,29,29,0.94,,correct,1.0,exact_match
+bird_form_005,latitude_minutes,35,35,0.996,,correct,1.0,exact_match
+bird_form_005,longitude_degrees,150,150,0.99,,correct,1.0,exact_match
+bird_form_005,longitude_minutes,15,15,0.993,,correct,1.0,exact_match
+bird_form_005,location_description,Biniguy,Binquy,0.654,low_confidence,partial,0.769,text_partial_match
+bird_form_005,first_date,28/4/25,28/4/25,0.988,,correct,1.0,date_match
+bird_form_005,last_day,,,,blank_or_not_detected,correct,1.0,blank_match

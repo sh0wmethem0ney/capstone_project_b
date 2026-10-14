@@ -1,0 +1,3592 @@
+{
+	"status": "succeeded",
+	"createdDateTime": "2026-09-09T13:28:36Z",
+	"lastUpdatedDateTime": "2026-09-09T13:28:37Z",
+	"analyzeResult": {
+		"apiVersion": "2024-11-30",
+		"modelId": "prebuilt-read",
+		"stringIndexType": "utf16CodeUnit",
+		"content": "NSW Bird Atlassers Inc A group monitoring birds in New South Wales\nwww.nswbirdatlassers.org.au\n15 of us.\nBIRD RECORD SHEET\nPlease send all sheets to: Donna Moody, 85/1 Regatta Drive Valla Beach. 2315\nAdmin use only\nNSW BIRD ATLAS DATABASE-REF:\nDISK ENTRY SHEET No:\nBK4120\nMEMBER NUMBER:\n26196\nNUMBER OF\nSPECIES RECORDED\n7$\nTOTAL NUMBER of BREEDING SPECIES\nNAME:\nboff allesson\nGRID REFERENCE:\nLatitude\n30\n55\nDegrees\n.Mins\nLongitude\n153\n05\nDegrees\n.Mins\nLOCATION - Describe location precisely.\nSouth West Rocks\nMacklay Rua 1\nADDRESS\nPostcode\nEMAIL\nPERIOD OF OBSERVATION First Date\n11/2/26 Last Day\n-\n-",
+		"pages": [
+			{
+				"pageNumber": 1,
+				"angle": 0.09301230311393738,
+				"width": 2481,
+				"height": 912,
+				"unit": "pixel",
+				"words": [
+					{
+						"content": "NSW",
+						"polygon": [
+							308,
+							74,
+							390,
+							74,
+							389,
+							113,
+							307,
+							113
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 0,
+							"length": 3
+						}
+					},
+					{
+						"content": "Bird",
+						"polygon": [
+							401,
+							74,
+							464,
+							74,
+							463,
+							113,
+							400,
+							113
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 4,
+							"length": 4
+						}
+					},
+					{
+						"content": "Atlassers",
+						"polygon": [
+							475,
+							74,
+							617,
+							75,
+							616,
+							113,
+							474,
+							113
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 9,
+							"length": 9
+						}
+					},
+					{
+						"content": "Inc",
+						"polygon": [
+							627,
+							75,
+							675,
+							75,
+							675,
+							113,
+							626,
+							113
+						],
+						"confidence": 0.963,
+						"span": {
+							"offset": 19,
+							"length": 3
+						}
+					},
+					{
+						"content": "A",
+						"polygon": [
+							309,
+							113,
+							322,
+							113,
+							321,
+							139,
+							308,
+							139
+						],
+						"confidence": 0.945,
+						"span": {
+							"offset": 23,
+							"length": 1
+						}
+					},
+					{
+						"content": "group",
+						"polygon": [
+							327,
+							113,
+							371,
+							113,
+							370,
+							139,
+							326,
+							139
+						],
+						"confidence": 0.864,
+						"span": {
+							"offset": 25,
+							"length": 5
+						}
+					},
+					{
+						"content": "monitoring",
+						"polygon": [
+							375,
+							113,
+							469,
+							114,
+							469,
+							138,
+							375,
+							139
+						],
+						"confidence": 0.948,
+						"span": {
+							"offset": 31,
+							"length": 10
+						}
+					},
+					{
+						"content": "birds",
+						"polygon": [
+							474,
+							114,
+							510,
+							114,
+							509,
+							137,
+							473,
+							138
+						],
+						"confidence": 0.649,
+						"span": {
+							"offset": 42,
+							"length": 5
+						}
+					},
+					{
+						"content": "in",
+						"polygon": [
+							514,
+							114,
+							533,
+							114,
+							532,
+							137,
+							514,
+							137
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 48,
+							"length": 2
+						}
+					},
+					{
+						"content": "New",
+						"polygon": [
+							537,
+							114,
+							573,
+							114,
+							572,
+							137,
+							537,
+							137
+						],
+						"confidence": 0.963,
+						"span": {
+							"offset": 51,
+							"length": 3
+						}
+					},
+					{
+						"content": "South",
+						"polygon": [
+							578,
+							114,
+							624,
+							114,
+							624,
+							137,
+							577,
+							137
+						],
+						"confidence": 0.985,
+						"span": {
+							"offset": 55,
+							"length": 5
+						}
+					},
+					{
+						"content": "Wales",
+						"polygon": [
+							629,
+							114,
+							679,
+							113,
+							678,
+							137,
+							628,
+							137
+						],
+						"confidence": 0.886,
+						"span": {
+							"offset": 61,
+							"length": 5
+						}
+					},
+					{
+						"content": "www.nswbirdatlassers.org.au",
+						"polygon": [
+							118,
+							313,
+							591,
+							314,
+							591,
+							350,
+							118,
+							345
+						],
+						"confidence": 0.989,
+						"span": {
+							"offset": 67,
+							"length": 27
+						}
+					},
+					{
+						"content": "15",
+						"polygon": [
+							812,
+							30,
+							884,
+							25,
+							884,
+							77,
+							812,
+							83
+						],
+						"confidence": 0.969,
+						"span": {
+							"offset": 95,
+							"length": 2
+						}
+					},
+					{
+						"content": "of",
+						"polygon": [
+							914,
+							20,
+							972,
+							26,
+							971,
+							102,
+							913,
+							105
+						],
+						"confidence": 0.816,
+						"span": {
+							"offset": 98,
+							"length": 2
+						}
+					},
+					{
+						"content": "us.",
+						"polygon": [
+							1009,
+							29,
+							1188,
+							28,
+							1188,
+							88,
+							1009,
+							101
+						],
+						"confidence": 0.609,
+						"span": {
+							"offset": 101,
+							"length": 3
+						}
+					},
+					{
+						"content": "BIRD",
+						"polygon": [
+							815,
+							126,
+							941,
+							125,
+							941,
+							180,
+							815,
+							180
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 105,
+							"length": 4
+						}
+					},
+					{
+						"content": "RECORD",
+						"polygon": [
+							970,
+							125,
+							1223,
+							125,
+							1223,
+							179,
+							970,
+							180
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 110,
+							"length": 6
+						}
+					},
+					{
+						"content": "SHEET",
+						"polygon": [
+							1244,
+							125,
+							1437,
+							128,
+							1437,
+							179,
+							1244,
+							179
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 117,
+							"length": 5
+						}
+					},
+					{
+						"content": "Please",
+						"polygon": [
+							869,
+							204,
+							994,
+							204,
+							993,
+							242,
+							868,
+							241
+						],
+						"confidence": 0.985,
+						"span": {
+							"offset": 123,
+							"length": 6
+						}
+					},
+					{
+						"content": "send",
+						"polygon": [
+							1003,
+							204,
+							1086,
+							204,
+							1085,
+							242,
+							1003,
+							242
+						],
+						"confidence": 0.99,
+						"span": {
+							"offset": 130,
+							"length": 4
+						}
+					},
+					{
+						"content": "all",
+						"polygon": [
+							1095,
+							204,
+							1133,
+							204,
+							1132,
+							242,
+							1094,
+							242
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 135,
+							"length": 3
+						}
+					},
+					{
+						"content": "sheets",
+						"polygon": [
+							1143,
+							204,
+							1253,
+							206,
+							1252,
+							241,
+							1143,
+							242
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 139,
+							"length": 6
+						}
+					},
+					{
+						"content": "to:",
+						"polygon": [
+							1265,
+							206,
+							1308,
+							207,
+							1307,
+							241,
+							1265,
+							241
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 146,
+							"length": 3
+						}
+					},
+					{
+						"content": "Donna",
+						"polygon": [
+							876,
+							248,
+							987,
+							248,
+							986,
+							287,
+							875,
+							286
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 150,
+							"length": 5
+						}
+					},
+					{
+						"content": "Moody,",
+						"polygon": [
+							999,
+							248,
+							1118,
+							248,
+							1117,
+							287,
+							999,
+							287
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 156,
+							"length": 6
+						}
+					},
+					{
+						"content": "85/1",
+						"polygon": [
+							1133,
+							248,
+							1202,
+							248,
+							1202,
+							287,
+							1133,
+							287
+						],
+						"confidence": 0.99,
+						"span": {
+							"offset": 163,
+							"length": 4
+						}
+					},
+					{
+						"content": "Regatta",
+						"polygon": [
+							1216,
+							248,
+							1345,
+							248,
+							1345,
+							288,
+							1216,
+							287
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 168,
+							"length": 7
+						}
+					},
+					{
+						"content": "Drive",
+						"polygon": [
+							1357,
+							248,
+							1446,
+							249,
+							1446,
+							288,
+							1357,
+							288
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 176,
+							"length": 5
+						}
+					},
+					{
+						"content": "Valla",
+						"polygon": [
+							879,
+							291,
+							959,
+							291,
+							959,
+							326,
+							879,
+							327
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 182,
+							"length": 5
+						}
+					},
+					{
+						"content": "Beach.",
+						"polygon": [
+							972,
+							291,
+							1084,
+							291,
+							1084,
+							326,
+							971,
+							326
+						],
+						"confidence": 0.976,
+						"span": {
+							"offset": 188,
+							"length": 6
+						}
+					},
+					{
+						"content": "2315",
+						"polygon": [
+							1100,
+							291,
+							1187,
+							292,
+							1187,
+							327,
+							1099,
+							326
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 195,
+							"length": 4
+						}
+					},
+					{
+						"content": "Admin",
+						"polygon": [
+							1653,
+							119,
+							1761,
+							121,
+							1761,
+							157,
+							1653,
+							154
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 200,
+							"length": 5
+						}
+					},
+					{
+						"content": "use",
+						"polygon": [
+							1774,
+							121,
+							1832,
+							121,
+							1832,
+							158,
+							1774,
+							157
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 206,
+							"length": 3
+						}
+					},
+					{
+						"content": "only",
+						"polygon": [
+							1844,
+							121,
+							1916,
+							121,
+							1916,
+							158,
+							1844,
+							158
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 210,
+							"length": 4
+						}
+					},
+					{
+						"content": "NSW",
+						"polygon": [
+							1603,
+							163,
+							1661,
+							164,
+							1661,
+							195,
+							1603,
+							195
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 215,
+							"length": 3
+						}
+					},
+					{
+						"content": "BIRD",
+						"polygon": [
+							1684,
+							165,
+							1755,
+							165,
+							1755,
+							195,
+							1683,
+							195
+						],
+						"confidence": 0.989,
+						"span": {
+							"offset": 219,
+							"length": 4
+						}
+					},
+					{
+						"content": "ATLAS",
+						"polygon": [
+							1762,
+							165,
+							1862,
+							164,
+							1862,
+							196,
+							1762,
+							195
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 224,
+							"length": 5
+						}
+					},
+					{
+						"content": "DATABASE-REF:",
+						"polygon": [
+							1604,
+							201,
+							1844,
+							203,
+							1844,
+							234,
+							1603,
+							234
+						],
+						"confidence": 0.858,
+						"span": {
+							"offset": 230,
+							"length": 13
+						}
+					},
+					{
+						"content": "DISK",
+						"polygon": [
+							1605,
+							261,
+							1678,
+							262,
+							1677,
+							293,
+							1604,
+							293
+						],
+						"confidence": 0.99,
+						"span": {
+							"offset": 244,
+							"length": 4
+						}
+					},
+					{
+						"content": "ENTRY",
+						"polygon": [
+							1685,
+							262,
+							1790,
+							263,
+							1789,
+							293,
+							1684,
+							293
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 249,
+							"length": 5
+						}
+					},
+					{
+						"content": "SHEET",
+						"polygon": [
+							1602,
+							297,
+							1704,
+							298,
+							1703,
+							333,
+							1601,
+							333
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 255,
+							"length": 5
+						}
+					},
+					{
+						"content": "No:",
+						"polygon": [
+							1711,
+							298,
+							1766,
+							299,
+							1765,
+							333,
+							1710,
+							333
+						],
+						"confidence": 0.99,
+						"span": {
+							"offset": 261,
+							"length": 3
+						}
+					},
+					{
+						"content": "BK4120",
+						"polygon": [
+							1939,
+							273,
+							2270,
+							97,
+							2314,
+							206,
+							1980,
+							370
+						],
+						"confidence": 0.405,
+						"span": {
+							"offset": 265,
+							"length": 6
+						}
+					},
+					{
+						"content": "MEMBER",
+						"polygon": [
+							88,
+							440,
+							235,
+							440,
+							235,
+							473,
+							88,
+							473
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 272,
+							"length": 6
+						}
+					},
+					{
+						"content": "NUMBER:",
+						"polygon": [
+							246,
+							440,
+							400,
+							439,
+							400,
+							473,
+							246,
+							473
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 279,
+							"length": 7
+						}
+					},
+					{
+						"content": "26196",
+						"polygon": [
+							437,
+							391,
+							687,
+							391,
+							687,
+							485,
+							437,
+							487
+						],
+						"confidence": 0.974,
+						"span": {
+							"offset": 287,
+							"length": 5
+						}
+					},
+					{
+						"content": "NUMBER",
+						"polygon": [
+							934,
+							417,
+							1080,
+							418,
+							1079,
+							452,
+							932,
+							453
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 293,
+							"length": 6
+						}
+					},
+					{
+						"content": "OF",
+						"polygon": [
+							1091,
+							418,
+							1136,
+							418,
+							1136,
+							453,
+							1089,
+							452
+						],
+						"confidence": 0.977,
+						"span": {
+							"offset": 300,
+							"length": 2
+						}
+					},
+					{
+						"content": "SPECIES",
+						"polygon": [
+							934,
+							457,
+							1079,
+							457,
+							1078,
+							491,
+							934,
+							491
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 303,
+							"length": 7
+						}
+					},
+					{
+						"content": "RECORDED",
+						"polygon": [
+							1091,
+							457,
+							1281,
+							457,
+							1281,
+							491,
+							1091,
+							491
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 311,
+							"length": 8
+						}
+					},
+					{
+						"content": "7$",
+						"polygon": [
+							1350,
+							399,
+							1491,
+							399,
+							1491,
+							483,
+							1349,
+							481
+						],
+						"confidence": 0.669,
+						"span": {
+							"offset": 320,
+							"length": 2
+						}
+					},
+					{
+						"content": "TOTAL",
+						"polygon": [
+							1622,
+							401,
+							1731,
+							402,
+							1731,
+							433,
+							1623,
+							434
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 323,
+							"length": 5
+						}
+					},
+					{
+						"content": "NUMBER",
+						"polygon": [
+							1741,
+							402,
+							1886,
+							402,
+							1885,
+							434,
+							1741,
+							433
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 329,
+							"length": 6
+						}
+					},
+					{
+						"content": "of",
+						"polygon": [
+							1895,
+							402,
+							1927,
+							402,
+							1926,
+							434,
+							1894,
+							434
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 336,
+							"length": 2
+						}
+					},
+					{
+						"content": "BREEDING",
+						"polygon": [
+							1622,
+							439,
+							1797,
+							439,
+							1796,
+							473,
+							1622,
+							474
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 339,
+							"length": 8
+						}
+					},
+					{
+						"content": "SPECIES",
+						"polygon": [
+							1808,
+							439,
+							1954,
+							439,
+							1954,
+							472,
+							1807,
+							473
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 348,
+							"length": 7
+						}
+					},
+					{
+						"content": "NAME:",
+						"polygon": [
+							87,
+							525,
+							195,
+							526,
+							195,
+							555,
+							87,
+							555
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 356,
+							"length": 5
+						}
+					},
+					{
+						"content": "boff",
+						"polygon": [
+							233,
+							509,
+							385,
+							510,
+							385,
+							583,
+							233,
+							579
+						],
+						"confidence": 0.667,
+						"span": {
+							"offset": 362,
+							"length": 4
+						}
+					},
+					{
+						"content": "allesson",
+						"polygon": [
+							423,
+							510,
+							743,
+							517,
+							743,
+							582,
+							423,
+							583
+						],
+						"confidence": 0.672,
+						"span": {
+							"offset": 367,
+							"length": 8
+						}
+					},
+					{
+						"content": "GRID",
+						"polygon": [
+							934,
+							524,
+							1017,
+							525,
+							1017,
+							558,
+							934,
+							558
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 376,
+							"length": 4
+						}
+					},
+					{
+						"content": "REFERENCE:",
+						"polygon": [
+							1030,
+							525,
+							1245,
+							524,
+							1244,
+							558,
+							1029,
+							558
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 381,
+							"length": 10
+						}
+					},
+					{
+						"content": "Latitude",
+						"polygon": [
+							935,
+							606,
+							1055,
+							606,
+							1054,
+							636,
+							934,
+							635
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 392,
+							"length": 8
+						}
+					},
+					{
+						"content": "30",
+						"polygon": [
+							1109,
+							568,
+							1190,
+							568,
+							1190,
+							628,
+							1109,
+							627
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 401,
+							"length": 2
+						}
+					},
+					{
+						"content": "55",
+						"polygon": [
+							1353,
+							548,
+							1465,
+							548,
+							1465,
+							618,
+							1353,
+							617
+						],
+						"confidence": 0.961,
+						"span": {
+							"offset": 404,
+							"length": 2
+						}
+					},
+					{
+						"content": "Degrees",
+						"polygon": [
+							1226,
+							606,
+							1355,
+							609,
+							1355,
+							641,
+							1225,
+							640
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 407,
+							"length": 7
+						}
+					},
+					{
+						"content": ".Mins",
+						"polygon": [
+							1481,
+							605,
+							1561,
+							605,
+							1561,
+							636,
+							1481,
+							635
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 415,
+							"length": 5
+						}
+					},
+					{
+						"content": "Longitude",
+						"polygon": [
+							938,
+							699,
+							1087,
+							700,
+							1087,
+							736,
+							938,
+							736
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 421,
+							"length": 9
+						}
+					},
+					{
+						"content": "153",
+						"polygon": [
+							1120,
+							644,
+							1233,
+							643,
+							1233,
+							705,
+							1120,
+							708
+						],
+						"confidence": 0.949,
+						"span": {
+							"offset": 431,
+							"length": 3
+						}
+					},
+					{
+						"content": "05",
+						"polygon": [
+							1356,
+							662,
+							1454,
+							656,
+							1454,
+							702,
+							1357,
+							709
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 435,
+							"length": 2
+						}
+					},
+					{
+						"content": "Degrees",
+						"polygon": [
+							1225,
+							700,
+							1354,
+							703,
+							1353,
+							734,
+							1225,
+							733
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 438,
+							"length": 7
+						}
+					},
+					{
+						"content": ".Mins",
+						"polygon": [
+							1473,
+							696,
+							1557,
+							696,
+							1557,
+							730,
+							1473,
+							731
+						],
+						"confidence": 0.989,
+						"span": {
+							"offset": 446,
+							"length": 5
+						}
+					},
+					{
+						"content": "LOCATION",
+						"polygon": [
+							1621,
+							523,
+							1792,
+							523,
+							1792,
+							559,
+							1621,
+							558
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 452,
+							"length": 8
+						}
+					},
+					{
+						"content": "-",
+						"polygon": [
+							1804,
+							523,
+							1815,
+							523,
+							1815,
+							559,
+							1804,
+							559
+						],
+						"confidence": 0.979,
+						"span": {
+							"offset": 461,
+							"length": 1
+						}
+					},
+					{
+						"content": "Describe",
+						"polygon": [
+							1825,
+							523,
+							1951,
+							523,
+							1951,
+							560,
+							1825,
+							559
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 463,
+							"length": 8
+						}
+					},
+					{
+						"content": "location",
+						"polygon": [
+							1959,
+							523,
+							2078,
+							523,
+							2078,
+							561,
+							1959,
+							560
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 472,
+							"length": 8
+						}
+					},
+					{
+						"content": "precisely.",
+						"polygon": [
+							2090,
+							523,
+							2229,
+							524,
+							2229,
+							562,
+							2090,
+							561
+						],
+						"confidence": 0.989,
+						"span": {
+							"offset": 481,
+							"length": 10
+						}
+					},
+					{
+						"content": "South",
+						"polygon": [
+							1632,
+							568,
+							1800,
+							563,
+							1799,
+							624,
+							1631,
+							622
+						],
+						"confidence": 0.647,
+						"span": {
+							"offset": 492,
+							"length": 5
+						}
+					},
+					{
+						"content": "West",
+						"polygon": [
+							1817,
+							562,
+							1975,
+							559,
+							1975,
+							624,
+							1816,
+							624
+						],
+						"confidence": 0.581,
+						"span": {
+							"offset": 498,
+							"length": 4
+						}
+					},
+					{
+						"content": "Rocks",
+						"polygon": [
+							1990,
+							559,
+							2207,
+							559,
+							2207,
+							623,
+							1989,
+							624
+						],
+						"confidence": 0.691,
+						"span": {
+							"offset": 503,
+							"length": 5
+						}
+					},
+					{
+						"content": "Macklay",
+						"polygon": [
+							1638,
+							648,
+							1942,
+							640,
+							1940,
+							705,
+							1636,
+							705
+						],
+						"confidence": 0.785,
+						"span": {
+							"offset": 509,
+							"length": 7
+						}
+					},
+					{
+						"content": "Rua",
+						"polygon": [
+							1966,
+							640,
+							2116,
+							637,
+							2114,
+							710,
+							1964,
+							705
+						],
+						"confidence": 0.272,
+						"span": {
+							"offset": 517,
+							"length": 3
+						}
+					},
+					{
+						"content": "1",
+						"polygon": [
+							2137,
+							637,
+							2178,
+							636,
+							2178,
+							712,
+							2135,
+							711
+						],
+						"confidence": 0.287,
+						"span": {
+							"offset": 521,
+							"length": 1
+						}
+					},
+					{
+						"content": "ADDRESS",
+						"polygon": [
+							87,
+							655,
+							252,
+							657,
+							252,
+							687,
+							87,
+							687
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 523,
+							"length": 7
+						}
+					},
+					{
+						"content": "Postcode",
+						"polygon": [
+							579,
+							736,
+							721,
+							737,
+							721,
+							768,
+							579,
+							768
+						],
+						"confidence": 0.977,
+						"span": {
+							"offset": 531,
+							"length": 8
+						}
+					},
+					{
+						"content": "EMAIL",
+						"polygon": [
+							85,
+							835,
+							191,
+							836,
+							190,
+							872,
+							85,
+							871
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 540,
+							"length": 5
+						}
+					},
+					{
+						"content": "PERIOD",
+						"polygon": [
+							933,
+							837,
+							1060,
+							837,
+							1060,
+							871,
+							933,
+							871
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 546,
+							"length": 6
+						}
+					},
+					{
+						"content": "OF",
+						"polygon": [
+							1072,
+							837,
+							1116,
+							837,
+							1116,
+							872,
+							1072,
+							872
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 553,
+							"length": 2
+						}
+					},
+					{
+						"content": "OBSERVATION",
+						"polygon": [
+							1128,
+							837,
+							1366,
+							837,
+							1365,
+							872,
+							1127,
+							872
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 556,
+							"length": 11
+						}
+					},
+					{
+						"content": "First",
+						"polygon": [
+							1407,
+							837,
+							1471,
+							837,
+							1470,
+							872,
+							1406,
+							872
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 568,
+							"length": 5
+						}
+					},
+					{
+						"content": "Date",
+						"polygon": [
+							1490,
+							837,
+							1561,
+							838,
+							1561,
+							872,
+							1489,
+							872
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 574,
+							"length": 4
+						}
+					},
+					{
+						"content": "11/2/26",
+						"polygon": [
+							1578,
+							819,
+							1808,
+							821,
+							1807,
+							880,
+							1578,
+							881
+						],
+						"confidence": 0.732,
+						"span": {
+							"offset": 579,
+							"length": 7
+						}
+					},
+					{
+						"content": "Last",
+						"polygon": [
+							1819,
+							822,
+							1883,
+							826,
+							1882,
+							878,
+							1818,
+							880
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 587,
+							"length": 4
+						}
+					},
+					{
+						"content": "Day",
+						"polygon": [
+							1895,
+							827,
+							1960,
+							833,
+							1960,
+							876,
+							1894,
+							878
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 592,
+							"length": 3
+						}
+					},
+					{
+						"content": "-",
+						"polygon": [
+							2055,
+							846,
+							2054,
+							877,
+							2034,
+							877,
+							2035,
+							846
+						],
+						"confidence": 0.732,
+						"span": {
+							"offset": 596,
+							"length": 1
+						}
+					},
+					{
+						"content": "-",
+						"polygon": [
+							2146,
+							845,
+							2145,
+							873,
+							2127,
+							873,
+							2128,
+							844
+						],
+						"confidence": 0.663,
+						"span": {
+							"offset": 598,
+							"length": 1
+						}
+					}
+				],
+				"lines": [
+					{
+						"content": "NSW Bird Atlassers Inc",
+						"polygon": [
+							304,
+							74,
+							674,
+							74,
+							674,
+							113,
+							304,
+							112
+						],
+						"spans": [
+							{
+								"offset": 0,
+								"length": 22
+							}
+						]
+					},
+					{
+						"content": "A group monitoring birds in New South Wales",
+						"polygon": [
+							308,
+							112,
+							678,
+							112,
+							678,
+							137,
+							308,
+							138
+						],
+						"spans": [
+							{
+								"offset": 23,
+								"length": 43
+							}
+						]
+					},
+					{
+						"content": "www.nswbirdatlassers.org.au",
+						"polygon": [
+							117,
+							312,
+							590,
+							313,
+							590,
+							349,
+							117,
+							346
+						],
+						"spans": [
+							{
+								"offset": 67,
+								"length": 27
+							}
+						]
+					},
+					{
+						"content": "15",
+						"polygon": [
+							812,
+							30,
+							882,
+							25,
+							883,
+							78,
+							812,
+							84
+						],
+						"spans": [
+							{
+								"offset": 95,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "of us.",
+						"polygon": [
+							894,
+							18,
+							1187,
+							18,
+							1188,
+							100,
+							894,
+							104
+						],
+						"spans": [
+							{
+								"offset": 98,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "BIRD RECORD SHEET",
+						"polygon": [
+							814,
+							124,
+							1436,
+							124,
+							1436,
+							179,
+							814,
+							179
+						],
+						"spans": [
+							{
+								"offset": 105,
+								"length": 17
+							}
+						]
+					},
+					{
+						"content": "Please send all sheets to:",
+						"polygon": [
+							868,
+							203,
+							1307,
+							204,
+							1307,
+							241,
+							868,
+							240
+						],
+						"spans": [
+							{
+								"offset": 123,
+								"length": 26
+							}
+						]
+					},
+					{
+						"content": "Donna Moody, 85/1 Regatta Drive",
+						"polygon": [
+							874,
+							247,
+							1445,
+							248,
+							1445,
+							287,
+							874,
+							286
+						],
+						"spans": [
+							{
+								"offset": 150,
+								"length": 31
+							}
+						]
+					},
+					{
+						"content": "Valla Beach. 2315",
+						"polygon": [
+							878,
+							290,
+							1186,
+							291,
+							1186,
+							326,
+							878,
+							326
+						],
+						"spans": [
+							{
+								"offset": 182,
+								"length": 17
+							}
+						]
+					},
+					{
+						"content": "Admin use only",
+						"polygon": [
+							1653,
+							119,
+							1915,
+							120,
+							1915,
+							157,
+							1653,
+							155
+						],
+						"spans": [
+							{
+								"offset": 200,
+								"length": 14
+							}
+						]
+					},
+					{
+						"content": "NSW BIRD ATLAS",
+						"polygon": [
+							1603,
+							163,
+							1861,
+							164,
+							1861,
+							195,
+							1603,
+							194
+						],
+						"spans": [
+							{
+								"offset": 215,
+								"length": 14
+							}
+						]
+					},
+					{
+						"content": "DATABASE-REF:",
+						"polygon": [
+							1603,
+							201,
+							1843,
+							201,
+							1843,
+							233,
+							1603,
+							233
+						],
+						"spans": [
+							{
+								"offset": 230,
+								"length": 13
+							}
+						]
+					},
+					{
+						"content": "DISK ENTRY",
+						"polygon": [
+							1604,
+							260,
+							1789,
+							260,
+							1789,
+							293,
+							1604,
+							292
+						],
+						"spans": [
+							{
+								"offset": 244,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "SHEET No:",
+						"polygon": [
+							1601,
+							297,
+							1765,
+							297,
+							1765,
+							332,
+							1601,
+							332
+						],
+						"spans": [
+							{
+								"offset": 255,
+								"length": 9
+							}
+						]
+					},
+					{
+						"content": "BK4120",
+						"polygon": [
+							1938,
+							270,
+							2258,
+							97,
+							2314,
+							208,
+							1985,
+							370
+						],
+						"spans": [
+							{
+								"offset": 265,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "MEMBER NUMBER:",
+						"polygon": [
+							87,
+							439,
+							399,
+							439,
+							399,
+							472,
+							87,
+							473
+						],
+						"spans": [
+							{
+								"offset": 272,
+								"length": 14
+							}
+						]
+					},
+					{
+						"content": "26196",
+						"polygon": [
+							437,
+							391,
+							686,
+							395,
+							686,
+							479,
+							437,
+							487
+						],
+						"spans": [
+							{
+								"offset": 287,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "NUMBER OF",
+						"polygon": [
+							932,
+							417,
+							1135,
+							417,
+							1136,
+							452,
+							932,
+							452
+						],
+						"spans": [
+							{
+								"offset": 293,
+								"length": 9
+							}
+						]
+					},
+					{
+						"content": "SPECIES RECORDED",
+						"polygon": [
+							934,
+							456,
+							1280,
+							456,
+							1280,
+							490,
+							934,
+							490
+						],
+						"spans": [
+							{
+								"offset": 303,
+								"length": 16
+							}
+						]
+					},
+					{
+						"content": "7$",
+						"polygon": [
+							1353,
+							400,
+							1490,
+							399,
+							1490,
+							483,
+							1349,
+							478
+						],
+						"spans": [
+							{
+								"offset": 320,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "TOTAL NUMBER of",
+						"polygon": [
+							1621,
+							400,
+							1926,
+							401,
+							1926,
+							433,
+							1621,
+							433
+						],
+						"spans": [
+							{
+								"offset": 323,
+								"length": 15
+							}
+						]
+					},
+					{
+						"content": "BREEDING SPECIES",
+						"polygon": [
+							1622,
+							439,
+							1953,
+							439,
+							1953,
+							472,
+							1622,
+							473
+						],
+						"spans": [
+							{
+								"offset": 339,
+								"length": 16
+							}
+						]
+					},
+					{
+						"content": "NAME:",
+						"polygon": [
+							87,
+							524,
+							194,
+							525,
+							194,
+							555,
+							87,
+							554
+						],
+						"spans": [
+							{
+								"offset": 356,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "boff allesson",
+						"polygon": [
+							232,
+							508,
+							742,
+							513,
+							741,
+							583,
+							232,
+							579
+						],
+						"spans": [
+							{
+								"offset": 362,
+								"length": 13
+							}
+						]
+					},
+					{
+						"content": "GRID REFERENCE:",
+						"polygon": [
+							934,
+							524,
+							1244,
+							524,
+							1244,
+							557,
+							934,
+							557
+						],
+						"spans": [
+							{
+								"offset": 376,
+								"length": 15
+							}
+						]
+					},
+					{
+						"content": "Latitude",
+						"polygon": [
+							934,
+							605,
+							1054,
+							605,
+							1054,
+							635,
+							934,
+							635
+						],
+						"spans": [
+							{
+								"offset": 392,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "30",
+						"polygon": [
+							1113,
+							568,
+							1189,
+							568,
+							1189,
+							628,
+							1109,
+							627
+						],
+						"spans": [
+							{
+								"offset": 401,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "55",
+						"polygon": [
+							1356,
+							548,
+							1464,
+							550,
+							1461,
+							617,
+							1353,
+							618
+						],
+						"spans": [
+							{
+								"offset": 404,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "Degrees",
+						"polygon": [
+							1225,
+							606,
+							1354,
+							607,
+							1354,
+							640,
+							1225,
+							639
+						],
+						"spans": [
+							{
+								"offset": 407,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": ".Mins",
+						"polygon": [
+							1482,
+							605,
+							1560,
+							605,
+							1559,
+							636,
+							1481,
+							635
+						],
+						"spans": [
+							{
+								"offset": 415,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Longitude",
+						"polygon": [
+							938,
+							698,
+							1086,
+							699,
+							1086,
+							735,
+							938,
+							735
+						],
+						"spans": [
+							{
+								"offset": 421,
+								"length": 9
+							}
+						]
+					},
+					{
+						"content": "153",
+						"polygon": [
+							1123,
+							644,
+							1230,
+							643,
+							1232,
+							705,
+							1120,
+							709
+						],
+						"spans": [
+							{
+								"offset": 431,
+								"length": 3
+							}
+						]
+					},
+					{
+						"content": "05",
+						"polygon": [
+							1356,
+							662,
+							1452,
+							656,
+							1453,
+							703,
+							1357,
+							710
+						],
+						"spans": [
+							{
+								"offset": 435,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "Degrees",
+						"polygon": [
+							1224,
+							699,
+							1353,
+							701,
+							1353,
+							734,
+							1224,
+							733
+						],
+						"spans": [
+							{
+								"offset": 438,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": ".Mins",
+						"polygon": [
+							1475,
+							696,
+							1556,
+							696,
+							1555,
+							730,
+							1473,
+							731
+						],
+						"spans": [
+							{
+								"offset": 446,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "LOCATION - Describe location precisely.",
+						"polygon": [
+							1621,
+							523,
+							2228,
+							523,
+							2228,
+							561,
+							1621,
+							559
+						],
+						"spans": [
+							{
+								"offset": 452,
+								"length": 39
+							}
+						]
+					},
+					{
+						"content": "South West Rocks",
+						"polygon": [
+							1631,
+							562,
+							2206,
+							558,
+							2206,
+							621,
+							1631,
+							624
+						],
+						"spans": [
+							{
+								"offset": 492,
+								"length": 16
+							}
+						]
+					},
+					{
+						"content": "Macklay Rua 1",
+						"polygon": [
+							1636,
+							638,
+							2177,
+							636,
+							2177,
+							711,
+							1636,
+							712
+						],
+						"spans": [
+							{
+								"offset": 509,
+								"length": 13
+							}
+						]
+					},
+					{
+						"content": "ADDRESS",
+						"polygon": [
+							87,
+							655,
+							251,
+							655,
+							251,
+							687,
+							87,
+							686
+						],
+						"spans": [
+							{
+								"offset": 523,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": "Postcode",
+						"polygon": [
+							579,
+							735,
+							720,
+							736,
+							720,
+							768,
+							579,
+							767
+						],
+						"spans": [
+							{
+								"offset": 531,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "EMAIL",
+						"polygon": [
+							86,
+							835,
+							190,
+							836,
+							190,
+							872,
+							85,
+							871
+						],
+						"spans": [
+							{
+								"offset": 540,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "PERIOD OF OBSERVATION First Date",
+						"polygon": [
+							932,
+							836,
+							1560,
+							837,
+							1560,
+							871,
+							932,
+							871
+						],
+						"spans": [
+							{
+								"offset": 546,
+								"length": 32
+							}
+						]
+					},
+					{
+						"content": "11/2/26 Last Day",
+						"polygon": [
+							1578,
+							817,
+							1959,
+							820,
+							1958,
+							881,
+							1577,
+							880
+						],
+						"spans": [
+							{
+								"offset": 579,
+								"length": 16
+							}
+						]
+					},
+					{
+						"content": "-",
+						"polygon": [
+							2055,
+							833,
+							2054,
+							875,
+							2034,
+							876,
+							2035,
+							833
+						],
+						"spans": [
+							{
+								"offset": 596,
+								"length": 1
+							}
+						]
+					},
+					{
+						"content": "-",
+						"polygon": [
+							2146,
+							835,
+							2144,
+							873,
+							2127,
+							873,
+							2128,
+							835
+						],
+						"spans": [
+							{
+								"offset": 598,
+								"length": 1
+							}
+						]
+					}
+				],
+				"spans": [
+					{
+						"offset": 0,
+						"length": 599
+					}
+				]
+			}
+		],
+		"paragraphs": [
+			{
+				"spans": [
+					{
+						"offset": 0,
+						"length": 66
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							304,
+							74,
+							678,
+							74,
+							678,
+							138,
+							304,
+							138
+						]
+					}
+				],
+				"content": "NSW Bird Atlassers Inc A group monitoring birds in New South Wales"
+			},
+			{
+				"spans": [
+					{
+						"offset": 67,
+						"length": 27
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							117,
+							312,
+							590,
+							313,
+							590,
+							349,
+							117,
+							348
+						]
+					}
+				],
+				"content": "www.nswbirdatlassers.org.au"
+			},
+			{
+				"spans": [
+					{
+						"offset": 95,
+						"length": 9
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							811,
+							19,
+							1187,
+							14,
+							1188,
+							100,
+							812,
+							105
+						]
+					}
+				],
+				"content": "15 of us."
+			},
+			{
+				"spans": [
+					{
+						"offset": 105,
+						"length": 17
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							814,
+							124,
+							1436,
+							124,
+							1436,
+							179,
+							814,
+							179
+						]
+					}
+				],
+				"content": "BIRD RECORD SHEET"
+			},
+			{
+				"spans": [
+					{
+						"offset": 123,
+						"length": 76
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							868,
+							203,
+							1445,
+							203,
+							1445,
+							326,
+							868,
+							326
+						]
+					}
+				],
+				"content": "Please send all sheets to: Donna Moody, 85/1 Regatta Drive Valla Beach. 2315"
+			},
+			{
+				"spans": [
+					{
+						"offset": 200,
+						"length": 14
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1653,
+							119,
+							1915,
+							120,
+							1915,
+							157,
+							1653,
+							156
+						]
+					}
+				],
+				"content": "Admin use only"
+			},
+			{
+				"spans": [
+					{
+						"offset": 215,
+						"length": 28
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1603,
+							163,
+							1861,
+							163,
+							1861,
+							233,
+							1603,
+							233
+						]
+					}
+				],
+				"content": "NSW BIRD ATLAS DATABASE-REF:"
+			},
+			{
+				"spans": [
+					{
+						"offset": 244,
+						"length": 20
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1601,
+							260,
+							1789,
+							260,
+							1789,
+							332,
+							1601,
+							332
+						]
+					}
+				],
+				"content": "DISK ENTRY SHEET No:"
+			},
+			{
+				"spans": [
+					{
+						"offset": 265,
+						"length": 6
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							2258,
+							97,
+							2314,
+							208,
+							1987,
+							373,
+							1931,
+							262
+						]
+					}
+				],
+				"content": "BK4120"
+			},
+			{
+				"spans": [
+					{
+						"offset": 272,
+						"length": 14
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							87,
+							439,
+							399,
+							439,
+							399,
+							472,
+							87,
+							473
+						]
+					}
+				],
+				"content": "MEMBER NUMBER:"
+			},
+			{
+				"spans": [
+					{
+						"offset": 287,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							437,
+							391,
+							686,
+							395,
+							686,
+							479,
+							437,
+							487
+						]
+					}
+				],
+				"content": "26196"
+			},
+			{
+				"spans": [
+					{
+						"offset": 293,
+						"length": 9
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							932,
+							417,
+							1135,
+							417,
+							1136,
+							452,
+							932,
+							452
+						]
+					}
+				],
+				"content": "NUMBER OF"
+			},
+			{
+				"spans": [
+					{
+						"offset": 303,
+						"length": 16
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							934,
+							456,
+							1280,
+							456,
+							1280,
+							490,
+							934,
+							490
+						]
+					}
+				],
+				"content": "SPECIES RECORDED"
+			},
+			{
+				"spans": [
+					{
+						"offset": 320,
+						"length": 2
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1352,
+							394,
+							1493,
+							399,
+							1490,
+							483,
+							1349,
+							478
+						]
+					}
+				],
+				"content": "7$"
+			},
+			{
+				"spans": [
+					{
+						"offset": 323,
+						"length": 32
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1621,
+							400,
+							1953,
+							399,
+							1953,
+							472,
+							1621,
+							473
+						]
+					}
+				],
+				"content": "TOTAL NUMBER of BREEDING SPECIES"
+			},
+			{
+				"spans": [
+					{
+						"offset": 356,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							87,
+							524,
+							194,
+							525,
+							194,
+							555,
+							87,
+							554
+						]
+					}
+				],
+				"content": "NAME:"
+			},
+			{
+				"spans": [
+					{
+						"offset": 362,
+						"length": 13
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							232,
+							508,
+							742,
+							513,
+							741,
+							583,
+							232,
+							579
+						]
+					}
+				],
+				"content": "boff allesson"
+			},
+			{
+				"spans": [
+					{
+						"offset": 376,
+						"length": 15
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							934,
+							524,
+							1244,
+							524,
+							1244,
+							557,
+							934,
+							557
+						]
+					}
+				],
+				"content": "GRID REFERENCE:"
+			},
+			{
+				"spans": [
+					{
+						"offset": 392,
+						"length": 8
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							934,
+							605,
+							1054,
+							605,
+							1054,
+							635,
+							934,
+							635
+						]
+					}
+				],
+				"content": "Latitude"
+			},
+			{
+				"spans": [
+					{
+						"offset": 401,
+						"length": 2
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1113,
+							568,
+							1189,
+							568,
+							1189,
+							628,
+							1109,
+							627
+						]
+					}
+				],
+				"content": "30"
+			},
+			{
+				"spans": [
+					{
+						"offset": 404,
+						"length": 2
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1356,
+							548,
+							1464,
+							550,
+							1461,
+							617,
+							1353,
+							618
+						]
+					}
+				],
+				"content": "55"
+			},
+			{
+				"spans": [
+					{
+						"offset": 407,
+						"length": 7
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1225,
+							606,
+							1354,
+							607,
+							1354,
+							640,
+							1225,
+							639
+						]
+					}
+				],
+				"content": "Degrees"
+			},
+			{
+				"spans": [
+					{
+						"offset": 415,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1482,
+							605,
+							1560,
+							605,
+							1559,
+							636,
+							1481,
+							635
+						]
+					}
+				],
+				"content": ".Mins"
+			},
+			{
+				"spans": [
+					{
+						"offset": 421,
+						"length": 9
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							938,
+							698,
+							1086,
+							699,
+							1086,
+							735,
+							938,
+							735
+						]
+					}
+				],
+				"content": "Longitude"
+			},
+			{
+				"spans": [
+					{
+						"offset": 431,
+						"length": 3
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1123,
+							644,
+							1230,
+							643,
+							1232,
+							705,
+							1120,
+							709
+						]
+					}
+				],
+				"content": "153"
+			},
+			{
+				"spans": [
+					{
+						"offset": 435,
+						"length": 2
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1356,
+							662,
+							1452,
+							656,
+							1453,
+							703,
+							1357,
+							710
+						]
+					}
+				],
+				"content": "05"
+			},
+			{
+				"spans": [
+					{
+						"offset": 438,
+						"length": 7
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1224,
+							699,
+							1353,
+							701,
+							1353,
+							734,
+							1224,
+							733
+						]
+					}
+				],
+				"content": "Degrees"
+			},
+			{
+				"spans": [
+					{
+						"offset": 446,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1475,
+							696,
+							1556,
+							696,
+							1555,
+							730,
+							1473,
+							731
+						]
+					}
+				],
+				"content": ".Mins"
+			},
+			{
+				"spans": [
+					{
+						"offset": 452,
+						"length": 39
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1621,
+							523,
+							2228,
+							523,
+							2228,
+							561,
+							1621,
+							559
+						]
+					}
+				],
+				"content": "LOCATION - Describe location precisely."
+			},
+			{
+				"spans": [
+					{
+						"offset": 492,
+						"length": 16
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1631,
+							562,
+							2206,
+							558,
+							2206,
+							621,
+							1631,
+							624
+						]
+					}
+				],
+				"content": "South West Rocks"
+			},
+			{
+				"spans": [
+					{
+						"offset": 509,
+						"length": 13
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1636,
+							638,
+							2177,
+							636,
+							2177,
+							711,
+							1636,
+							712
+						]
+					}
+				],
+				"content": "Macklay Rua 1"
+			},
+			{
+				"spans": [
+					{
+						"offset": 523,
+						"length": 7
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							87,
+							655,
+							251,
+							655,
+							251,
+							687,
+							87,
+							687
+						]
+					}
+				],
+				"content": "ADDRESS"
+			},
+			{
+				"spans": [
+					{
+						"offset": 531,
+						"length": 8
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							579,
+							735,
+							720,
+							736,
+							720,
+							768,
+							579,
+							767
+						]
+					}
+				],
+				"content": "Postcode"
+			},
+			{
+				"spans": [
+					{
+						"offset": 540,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							85,
+							835,
+							190,
+							836,
+							190,
+							872,
+							85,
+							871
+						]
+					}
+				],
+				"content": "EMAIL"
+			},
+			{
+				"spans": [
+					{
+						"offset": 546,
+						"length": 32
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							932,
+							836,
+							1560,
+							837,
+							1560,
+							871,
+							932,
+							871
+						]
+					}
+				],
+				"content": "PERIOD OF OBSERVATION First Date"
+			},
+			{
+				"spans": [
+					{
+						"offset": 579,
+						"length": 16
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1578,
+							817,
+							1959,
+							820,
+							1958,
+							881,
+							1577,
+							880
+						]
+					}
+				],
+				"content": "11/2/26 Last Day"
+			},
+			{
+				"spans": [
+					{
+						"offset": 596,
+						"length": 1
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							2055,
+							833,
+							2054,
+							875,
+							2034,
+							876,
+							2035,
+							833
+						]
+					}
+				],
+				"content": "-"
+			},
+			{
+				"spans": [
+					{
+						"offset": 598,
+						"length": 1
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							2146,
+							835,
+							2144,
+							873,
+							2127,
+							873,
+							2128,
+							835
+						]
+					}
+				],
+				"content": "-"
+			}
+		],
+		"styles": [
+			{
+				"confidence": 1,
+				"spans": [
+					{
+						"offset": 95,
+						"length": 9
+					},
+					{
+						"offset": 287,
+						"length": 5
+					},
+					{
+						"offset": 320,
+						"length": 2
+					},
+					{
+						"offset": 362,
+						"length": 13
+					},
+					{
+						"offset": 401,
+						"length": 5
+					},
+					{
+						"offset": 431,
+						"length": 6
+					},
+					{
+						"offset": 492,
+						"length": 30
+					}
+				],
+				"isHandwritten": true
+			},
+			{
+				"confidence": 0.8,
+				"spans": [
+					{
+						"offset": 265,
+						"length": 6
+					},
+					{
+						"offset": 596,
+						"length": 1
+					}
+				],
+				"isHandwritten": true
+			},
+			{
+				"confidence": 0.95,
+				"spans": [
+					{
+						"offset": 579,
+						"length": 16
+					},
+					{
+						"offset": 598,
+						"length": 1
+					}
+				],
+				"isHandwritten": true
+			}
+		],
+		"contentFormat": "text"
+	}
+}

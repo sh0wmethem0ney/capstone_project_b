@@ -1,0 +1,11 @@
+﻿form_id,field_name,manual_value,model_value,confidence,flag,match_status,similarity,error_type
+bird_form_004,member_number,20017,20017,0.95,,correct,1.0,exact_match
+bird_form_004,name,Cooper,Coopa,0.598,low_confidence,partial,0.727,text_partial_match
+bird_form_004,number_of_species_recorded,52,52,0.968,,correct,1.0,exact_match
+bird_form_004,latitude_degrees,30,30,0.994,,correct,1.0,exact_match
+bird_form_004,latitude_minutes,05,05,0.996,,correct,1.0,exact_match
+bird_form_004,longitude_degrees,153,153,0.992,,correct,1.0,exact_match
+bird_form_004,longitude_minutes,15,15,0.961,,correct,1.0,exact_match
+bird_form_004,location_description,Woolgoolga,Woolgoodga,0.653,low_confidence,partial,0.9,text_partial_match
+bird_form_004,first_date,1/2/25,1/2/25,0.898,,correct,1.0,date_match
+bird_form_004,last_day,28/2/25,28/2/25,0.892,,correct,1.0,date_match

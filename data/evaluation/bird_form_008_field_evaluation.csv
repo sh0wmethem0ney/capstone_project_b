@@ -1,0 +1,11 @@
+﻿form_id,field_name,manual_value,model_value,confidence,flag,match_status,similarity,error_type
+bird_form_008,member_number,20017,20017,0.949,,correct,1.0,exact_match
+bird_form_008,name,Cooper,Code,0.524,low_confidence,incorrect,0.6,value_mismatch
+bird_form_008,number_of_species_recorded,54,,,blank_or_not_detected,not_detected,0.0,model_value_empty
+bird_form_008,latitude_degrees,30,30,0.999,,correct,1.0,exact_match
+bird_form_008,latitude_minutes,05,05,0.982,,correct,1.0,exact_match
+bird_form_008,longitude_degrees,153,153,0.992,,correct,1.0,exact_match
+bird_form_008,longitude_minutes,15,15,0.976,,correct,1.0,exact_match
+bird_form_008,location_description,Woolgoolga,Woalgoolga,0.592,low_confidence,partial,0.9,text_partial_match
+bird_form_008,first_date,1/1/25,1/1/25,0.62,low_confidence,correct,1.0,date_match
+bird_form_008,last_day,31/1/25,31/1/25,0.949,,correct,1.0,date_match
