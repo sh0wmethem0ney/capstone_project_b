@@ -1,6 +1,6 @@
-# Azure API automation patch for Capstone Project B
+# Azure API Automation for Capstone Project B
 
-This patch replaces the manual Azure Document Intelligence Studio step:
+This script automates the manual Azure Document Intelligence Studio step:
 
 1. Open Azure Studio
 2. Upload `bird_form_XXX_upper_section.png`
@@ -8,10 +8,25 @@ This patch replaces the manual Azure Document Intelligence Studio step:
 4. Download JSON
 5. Rename it to `bird_form_XXX_upper_read.json`
 
-with an API call
+with an API call.
 
-## Existing project structure used by this patch
+**Do not run `run_pipeline.py` without a form ID. At least one form ID is required.**
 
+Example for a single file:
+
+```powershell
+python run_pipeline.py bird_form_001
+```
+
+Example for multiple files:
+
+```powershell
+python run_pipeline.py bird_form_001 bird_form_002 bird_form_003
+```
+
+## Existing project structure used by this script
+
+```text
 Your Local Project Directory
 ├─ data
 │  ├─ cropped_fields
@@ -24,68 +39,75 @@ Your Local Project Directory
 │  └─ raw_forms
 ├─ src
 │  ├─ ocr
-│  │  └─ azure_read.py                  <- new
+│  │  └─ azure_read.py
 │  ├─ postprocessing
 │  │  └─ anchor_based_simplified_json.py
 │  ├─ preprocessing
 │  └─ evaluation
 │     └─ accuracy_form.py
-├─ run_pipeline.py                       <- new
-├─ .env                                  <- create locally
-└─ requirements-azure.txt                <- new
+├─ run_pipeline.py
+├─ .env
+└─ requirements-azure.txt
 ```
 
 ## 1. Install packages
 
 From PowerShell:
 
-powershell
-cd Your Local Project Directory
+```powershell
+cd <project-root>
 python -m pip install -r requirements-azure.txt
-
+```
 
 ## 2. Create `.env`
 
 Copy `.env.example` to `.env`:
 
-powershell
+```powershell
 Copy-Item .env.example .env
+```
 
 Then enter the Azure endpoint and API key.
 
 Example shape:
 
+```env
 AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT=https://xxxx.cognitiveservices.azure.com/
 AZURE_DOCUMENT_INTELLIGENCE_KEY=xxxxxxxx
 AZURE_DOCUMENT_INTELLIGENCE_MODEL=prebuilt-read
+```
 
-
-***@@@Do not commit `.env`.@@@***
+**Do not commit `.env`.**
 
 Add this to `.gitignore` if it is not already there:
 
+```gitignore
 .env
+```
 
 ## 3. Test only the Azure replacement step
 
 Assuming this exists:
 
-data\cropped_fields\bird_form_002_upper_section.png
+```text
+data/cropped_fields/bird_form_002_upper_section.png
+```
 
-run:
+Run:
 
-powershell
-python src\ocr\azure_read.py bird_form_002
-
+```powershell
+python src/ocr/azure_read.py bird_form_002
+```
 
 The script automatically creates:
 
+```text
+data/azure_results/bird_form_002_upper_read.json
+```
 
-data\azure_results\bird_form_002_upper_read.json
+The output is wrapped in the same structure expected by the existing postprocessor:
 
-The output is wrapped in the same structure expected by the existing
-postprocessor:
-
+```json
 {
   "status": "succeeded",
   "analyzeResult": {
@@ -104,13 +126,17 @@ postprocessor:
     ]
   }
 }
+```
 
 ## 4. Run Azure + existing post-processing
 
+```powershell
 python run_pipeline.py bird_form_002
+```
 
 Flow:
 
+```text
 data/cropped_fields/bird_form_002_upper_section.png
         ↓
 Azure Document Intelligence API
@@ -120,14 +146,19 @@ data/azure_results/bird_form_002_upper_read.json
 src/postprocessing/anchor_based_simplified_json.py
         ↓
 data/simplified_outputs/bird_form_002_simplified.json
+```
 
 ## 5. Process multiple forms
 
+```powershell
 python run_pipeline.py bird_form_001 bird_form_002
+```
 
 No source-code edit is required for each new form as long as the input follows:
 
+```text
 {FORM_ID}_upper_section.png
+```
 
 ## 6. Re-run Azure
 
@@ -135,30 +166,33 @@ By default, an existing Azure JSON file is skipped to avoid unnecessary API call
 
 To force a new request:
 
+```powershell
 python run_pipeline.py bird_form_002 --force-azure
+```
 
 ## 7. Include the existing evaluation step
 
+```powershell
 python run_pipeline.py bird_form_002 --evaluate
+```
 
 This additionally invokes:
 
+```text
 src/evaluation/accuracy_form.py bird_form_002
-
+```
 
 ## Important
 
-This patch starts at the cropped image because that is the exact point where
-the current manual Azure Studio workflow begins. It does not change the
-existing preprocessing/cropping code.
+This script starts at the cropped image because that is the exact point where the current manual Azure Studio workflow begins. It does not change the existing preprocessing/cropping code.
 
 A later refactor may connect:
 
+```text
 raw form
 → preprocessing
 → cropping
 → Azure API
 → simplified JSON
-→ validation/evaluation
-
-into one command.
+→ field-level evaluation
+```

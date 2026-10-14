@@ -248,7 +248,7 @@ def find_sequence_anchor(words: list[dict], tokens: list[str]):
             target = norm(token)
 
             #candidate should be to the right of current word
-            #and should be roughly on the same horizontal line
+            #roughly on the same horizontal line
             candidates = [
                 word for word in words
                 if norm(word.get("content", "")) == target
