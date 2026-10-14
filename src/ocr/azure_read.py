@@ -1,7 +1,3 @@
-from __future__ import annotations
-#this helps Python handle type hints more safely
-#especially for Path | None style type hints
-
 import argparse
 import json
 import os
