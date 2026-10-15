@@ -15,7 +15,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 #post-processing script path
 #this script converts Azure raw JSON to simplified JSON
 POSTPROCESS_SCRIPT = (
-    PROJECT_ROOT / "src" / "postprocessing" / "anchor_based_simplified_json.py"
+    PROJECT_ROOT / "src" / "postprocessing" / "anchor_based.py"
 )
 
 #evaluation script path
