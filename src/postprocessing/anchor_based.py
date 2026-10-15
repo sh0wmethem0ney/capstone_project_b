@@ -470,6 +470,42 @@ def extract_value_right_of_line(
     return make_value(matched_words)
 
 
+def extract_species_count(words: list[dict], lines: list[dict], species_anchor: dict | None):
+
+    #extract one species count next to the SPECIES RECORDED label
+    #the old box also included latitude minutes on some forms
+    #keep the search above GRID REFERENCE and before the breeding section
+
+    if species_anchor is None:
+        return "", None
+
+    x1, y1, x2, y2 = species_anchor["bbox"]
+    grid_anchor = find_line(lines, ["GRID", "REFERENCE"])
+    breeding_anchor = find_line(lines, ["BREEDING", "SPECIES"])
+
+    right = x2 + 330
+    if breeding_anchor and breeding_anchor["bbox"][0] > x2:
+        right = min(right, breeding_anchor["bbox"][0] - 20)
+
+    bottom = y2 + 40
+    if grid_anchor and grid_anchor["bbox"][1] > y1:
+        bottom = min(bottom, grid_anchor["bbox"][1] - 12)
+
+    box = (x2 + 5, y1 - 90, right, bottom)
+    candidates = words_in_box(words, box, pattern=r"[0-9][0-9A-Za-z$!]{0,3}")
+
+    #only return one word, e.g. 43 instead of 43 25
+    #keep possible OCR errors such as 7$ for later evaluation
+    if not candidates:
+        return "", None
+
+    candidates = sorted(
+        candidates,
+        key=lambda word: (word["cx"], abs(word["cy"] - species_anchor["cy"]))
+    )
+    return make_value([candidates[0]])
+
+
 def extract_name(words: list[dict]):
 
     #extract name field using NAME anchor
@@ -527,10 +563,9 @@ def extract_name(words: list[dict]):
 
 def extract_coordinate_pair(words: list[dict], label: str, next_label: str | None = None):
 
-    #extract degree and minutes for Latitude or Longitude
-    #label = "Latitude" or "Longitude"
-    #for latitude, next_label = "Longitude" is used to limit y search area
-    #for longitude, next_label is not needed
+    #extract degrees and minutes next to Latitude or Longitude
+    #allow trailing punctuation from OCR, e.g. 153, -> 153
+    #do not guess missing digits if Azure reads a number incorrectly
 
     label_word = find_word(words, label)
 
@@ -538,103 +573,101 @@ def extract_coordinate_pair(words: list[dict], label: str, next_label: str | Non
         return ("", None), ("", None)
 
     next_label_word = find_word(words, next_label) if next_label else None
-
     x1, y1, x2, y2 = label_word["bbox"]
 
     if label.lower() == "longitude":
 
-        #longitude values are close to the Longitude label
-        #do not search too far upward
-        #otherwise latitude/grid values can be included incorrectly
-
+        #limit longitude search to its own row
         y_top = y1 - 80
         y_bottom = y2 + 90
 
     else:
 
-        #latitude values may appear slightly above the Latitude label
-        #so y_top is opened a little bit upward
-
+        #latitude numbers can appear above the printed label
         y_top = y1 - 100
-
         if next_label_word:
-            #stop latitude search before longitude area
             y_bottom = (label_word["cy"] + next_label_word["cy"]) / 2
         else:
             y_bottom = y2 + 100
 
-    box = (
-        x2,
-        y_top,
-        x2 + 650,
-        y_bottom,
-    )
+    box = (x2, y_top, x2 + 650, y_bottom)
 
-    #coordinate values should be numeric
-    #degree and minutes are expected to appear in the same search box
-    numeric_words = words_in_box(
-        words,
-        box,
-        pattern=r"[0-9]{1,3}"
-    )
-
-    #sort left to right
-    #first number = degree
-    #second number = minutes
+    #accept up to three digits followed by optional punctuation
+    numeric_words = words_in_box(words, box, pattern=r"[0-9]{1,3}[,.;:]?")
     numeric_words = sorted(numeric_words, key=lambda word: word["cx"])
 
-    if len(numeric_words) >= 2:
-        degree_words = [numeric_words[0]]
-        minute_words = [numeric_words[1]]
+    #keep the first two values as degree and minutes
+    #clean a copy so the original Azure JSON is unchanged
+    selected = []
+    for word in numeric_words[:2]:
+        cleaned = dict(word)
+        cleaned["content"] = word["content"].rstrip(",.;:")
+        selected.append(cleaned)
 
-    elif len(numeric_words) == 1:
-        degree_words = [numeric_words[0]]
-        minute_words = []
-
-    else:
-        degree_words = []
-        minute_words = []
+    degree_words = selected[:1]
+    minute_words = selected[1:2]
 
     return make_value(degree_words), make_value(minute_words)
 
 
 def extract_date_after_anchor(words: list[dict], tokens: list[str]):
 
-    #extract date value after date anchor
-    #tokens can be ["First", "Date"] or ["Last", "Day"]
-    #the function first finds the anchor sequence
-    #then extracts date-like words to the right side
+    #extract a date to the right of First Date or Last Day
+    #support dates split across two OCR words, e.g. 11/6/ + 25
+    #keep the date inside its own label area
 
     anchor = find_sequence_anchor(words, tokens)
-
     if anchor is None:
         return "", None
 
     x1, y1, x2, y2 = anchor["bbox"]
+    right = x2 + 450
 
-    #search region to the right side of date anchor
-    box = (
-        x2,
-        y1 - 70,
-        x2 + 450,
-        y2 + 80,
-    )
+    #do not include the Last Day value in the First Date search
+    if tokens[0].lower() == "first":
+        last_anchor = find_sequence_anchor(words, ["Last", "Day"])
+        if last_anchor and last_anchor["bbox"][0] > x2:
+            right = min(right, last_anchor["bbox"][0] - 5)
 
-    matched_words = words_in_box(
-        words,
-        box,
-        pattern=r"[0-9]{1,2}/[0-9]{1,2}/[0-9A-Za-z\)\(]{1,4}"
-    )
+    box = (x2, y1 - 70, right, y2 + 80)
+    candidates = sorted(words_in_box(words, box), key=lambda word: word["cx"])
 
-    value, confidence = make_value(matched_words)
+    for index, word in enumerate(candidates):
+        value = word.get("content", "").strip()
 
+        #full date, including OCR text like 14/5/2)
+        if re.fullmatch(r"[0-9]{1,2}/[0-9]{1,2}/[0-9A-Za-z()]{1,4}", value):
+            return clean_date(value), word.get("confidence")
+
+        #join a split year only if the next word is nearby
+        if re.fullmatch(r"[0-9]{1,2}/[0-9]{1,2}/", value):
+            for next_word in candidates[index + 1:]:
+                next_value = next_word.get("content", "").strip()
+                gap = next_word["bbox"][0] - word["bbox"][2]
+                if gap > 100:
+                    break
+                if (0 <= gap <= 100
+                        and abs(next_word["cy"] - word["cy"]) <= 50
+                        and re.fullmatch(r"[0-9]{2,4}", next_value)):
+                    return join_date_words([word, next_word])
+
+    return "", None
+
+
+def join_date_words(words: list[dict]) -> tuple[str, float | None]:
+
+    #join split OCR date words without a space
+    #average their Azure confidence scores as one field
+    value = "".join(word["content"].strip() for word in words)
+    confidences = [word.get("confidence") for word in words if word.get("confidence") is not None]
+    confidence = round(mean(confidences), 3) if confidences else None
     return clean_date(value), confidence
 
 
 def extract_location(words: list[dict], lines: list[dict], page_width: float):
 
     #extract location description
-    #first find LOCATION - Describe location precisely line
+    #first find LOCATION - Describe location
     #then extract handwritten words below/near that anchor
     #search box goes to the right edge of the page
 
@@ -686,15 +719,8 @@ def extract_fields_anchor_based(data: dict) -> dict:
         pattern=r"[0-9]{4,8}"
     )
 
-    #extract number of species recorded from right side of SPECIES RECORDED anchor
-    species_recorded, species_conf = extract_value_right_of_line(
-        words,
-        species_anchor,
-        x_extra=300,
-        y_pad_top=100,
-        y_pad_bottom=90,
-        pattern=r"[0-9A-Za-z$]+"
-    )
+    #extract only one species count near its printed label
+    species_recorded, species_conf = extract_species_count(words, lines, species_anchor)
 
     #extract name using NAME anchor and stop labels
     name, name_conf = extract_name(words)
