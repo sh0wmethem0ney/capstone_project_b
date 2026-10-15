@@ -39,14 +39,14 @@
       "flag": null
     },
     "longitude_degrees": {
-      "value": "15",
-      "confidence": 0.992,
+      "value": "153",
+      "confidence": 0.865,
       "flag": null
     },
     "longitude_minutes": {
-      "value": "",
-      "confidence": null,
-      "flag": "blank_or_not_detected"
+      "value": "15",
+      "confidence": 0.992,
+      "flag": null
     },
     "first_date": {
       "value": "1/7/25",

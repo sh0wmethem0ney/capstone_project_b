@@ -15,13 +15,9 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 SIMPLIFIED_DIR = BASE_DIR / "data" / "simplified_outputs"
 
 #manual reference CSV candidates
-#check paths
-#this is to avoid path issue
+#can be added later
 MANUAL_CSV_CANDIDATES = [
     BASE_DIR / "data" / "manual_reference" / "manual_reference_fields.csv",
-    BASE_DIR / "data" / "manual_reference" / "manual_reference_fields_template.csv",
-    BASE_DIR / "bird_form_csv_templates" / "manual_reference_fields_template.csv",
-    BASE_DIR / "data" / "bird_form_csv_templates" / "manual_reference_fields_template.csv",
 ]
 
 #output directory for evaluation results
@@ -92,6 +88,15 @@ def normalise(value: str) -> str:
 #because 11/02/2026 and 11/2/26 should be treated as the same date
 DATE_FIELDS = {"first_date", "last_day"}
 
+#numeric values can have leading zeros, but member number is an ID
+NUMERIC_FIELDS = {
+    "number_of_species_recorded",
+    "latitude_degrees",
+    "latitude_minutes",
+    "longitude_degrees",
+    "longitude_minutes",
+}
+
 
 def normalise_date(value: str) -> str:
 
@@ -106,7 +111,7 @@ def normalise_date(value: str) -> str:
     if value == "" or value == "__BLANK__":
         return ""
 
-    #common date formats used in OCR output and manual reference CSV
+    #common date formats used in OCR output and manual reference CSV -> can be added later
     formats = [
         "%d/%m/%Y",   #example: 11/02/2026
         "%d/%m/%y",   #example: 11/2/26
@@ -171,6 +176,14 @@ def classify_match(field_name: str, manual_value: str, model_value: str) -> tupl
     if manual_norm == model_norm:
         return "correct", "exact_match"
 
+    #compare numeric values without leading zeros
+    #example: 5 and 05 are the same number
+    #do not use this for member IDs or text fields
+    if field_name in NUMERIC_FIELDS:
+        if re.fullmatch(r"[0-9]+", manual_norm) and re.fullmatch(r"[0-9]+", model_norm):
+            if int(manual_norm) == int(model_norm):
+                return "correct", "numeric_match"
+
     #text-heavy fields can be partially correct
     #may not be perfect but still useful
     text_fields = {"name", "location_description", "address", "email"}
@@ -221,6 +234,12 @@ def evaluate_form(form_id: str, manual_rows: list[dict]):
             continue
 
         field_name = row.get("field_name", "")
+
+        #DES Ref is outside the current extraction scope
+        #warn only if the manual CSV still contains this field
+        if field_name in {"des_ref", "disk_entry_sheet_no"}:
+            print(f"[WARNING] {form_id}: {field_name} is excluded from evaluation.")
+            continue
 
         #only evaluate fields that exist in simplified JSON output
         #if manual CSV has extra fields, ignore them

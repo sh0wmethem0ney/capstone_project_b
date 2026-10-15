@@ -5,7 +5,7 @@ bird_form_001,number_of_species_recorded,75,7$,0.669,low_confidence,incorrect,0.
 bird_form_001,latitude_degrees,30,30,0.998,,correct,1.0,exact_match
 bird_form_001,latitude_minutes,55,55,0.961,,correct,1.0,exact_match
 bird_form_001,longitude_degrees,153,153,0.949,,correct,1.0,exact_match
-bird_form_001,longitude_minutes,5,05,0.988,,incorrect,0.667,value_mismatch
+bird_form_001,longitude_minutes,05,05,0.988,,correct,1.0,exact_match
 bird_form_001,location_description,South West Rocks Macleay River Boyters Lane,South West Rocks Macklay Rua 1,0.544,low_confidence,partial,0.712,text_partial_match
 bird_form_001,first_date,11/2/2026,11/2/26,0.732,,correct,0.875,date_match
 bird_form_001,last_day,,,,blank_or_not_detected,correct,1.0,blank_match

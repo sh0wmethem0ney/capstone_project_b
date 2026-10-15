@@ -19,8 +19,8 @@
       "flag": null
     },
     "number_of_species_recorded": {
-      "value": "68 55",
-      "confidence": 0.992,
+      "value": "68",
+      "confidence": 0.998,
       "flag": null
     },
     "name": {
@@ -49,9 +49,9 @@
       "flag": null
     },
     "first_date": {
-      "value": "",
-      "confidence": null,
-      "flag": "blank_or_not_detected"
+      "value": "11/6/25",
+      "confidence": 0.771,
+      "flag": null
     },
     "last_day": {
       "value": "",

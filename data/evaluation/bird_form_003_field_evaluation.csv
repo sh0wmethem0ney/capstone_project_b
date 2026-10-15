@@ -3,9 +3,9 @@ bird_form_003,member_number,20017,20017,0.939,,correct,1.0,exact_match
 bird_form_003,name,Cooper,Cadla,0.546,low_confidence,incorrect,0.182,value_mismatch
 bird_form_003,number_of_species_recorded,59,59,0.993,,correct,1.0,exact_match
 bird_form_003,latitude_degrees,30,30,0.863,,correct,1.0,exact_match
-bird_form_003,latitude_minutes,5,05,0.993,,incorrect,0.667,value_mismatch
+bird_form_003,latitude_minutes,05,05,0.993,,correct,1.0,exact_match
 bird_form_003,longitude_degrees,153,153,0.994,,correct,1.0,exact_match
 bird_form_003,longitude_minutes,15,15,0.993,,correct,1.0,exact_match
 bird_form_003,location_description,Woalgoolga,Woalgoolga,0.579,low_confidence,correct,1.0,exact_match
-bird_form_003,first_date,30/9/25,1/9/25,0.684,low_confidence,incorrect,0.769,value_mismatch
-bird_form_003,last_day,1/9/25,30/9/25,0.961,,incorrect,0.769,value_mismatch
+bird_form_003,first_date,1/9/25,1/9/25,0.684,low_confidence,correct,1.0,date_match
+bird_form_003,last_day,30/9/25,30/9/25,0.961,,correct,1.0,date_match

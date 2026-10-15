@@ -1,7 +1,7 @@
 ﻿form_id,field_name,manual_value,model_value,confidence,flag,match_status,similarity,error_type
 bird_form_006,member_number,20017,20017,0.826,,correct,1.0,exact_match
 bird_form_006,name,Cooper,Cada,0.618,low_confidence,incorrect,0.2,value_mismatch
-bird_form_006,number_of_species_recorded,43,43 25,0.997,,incorrect,0.571,value_mismatch
+bird_form_006,number_of_species_recorded,43,43,0.997,,correct,1.0,exact_match
 bird_form_006,latitude_degrees,29,29,0.996,,correct,1.0,exact_match
 bird_form_006,latitude_minutes,25,25,0.997,,correct,1.0,exact_match
 bird_form_006,longitude_degrees,149,149,0.995,,correct,1.0,exact_match

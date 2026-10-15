@@ -4,8 +4,8 @@ bird_form_010,name,Rob Cooper,RTB Cacher,0.327,low_confidence,incorrect,0.6,valu
 bird_form_010,number_of_species_recorded,68,68,0.993,,correct,1.0,exact_match
 bird_form_010,latitude_degrees,30,30,0.686,low_confidence,correct,1.0,exact_match
 bird_form_010,latitude_minutes,05,05,0.996,,correct,1.0,exact_match
-bird_form_010,longitude_degrees,153,15,0.992,,incorrect,0.8,value_mismatch
-bird_form_010,longitude_minutes,15,,,blank_or_not_detected,not_detected,0.0,model_value_empty
+bird_form_010,longitude_degrees,153,153,0.865,,correct,1.0,exact_match
+bird_form_010,longitude_minutes,15,15,0.992,,correct,1.0,exact_match
 bird_form_010,location_description,Woolgoolga,Woolgoolga,0.577,low_confidence,correct,1.0,exact_match
 bird_form_010,first_date,1/7/25,1/7/25,0.926,,correct,1.0,date_match
 bird_form_010,last_day,31/7/25,31/7/25,0.951,,correct,1.0,date_match
