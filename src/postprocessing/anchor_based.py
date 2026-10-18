@@ -4,17 +4,16 @@ import re
 import sys
 from statistics import mean
 
-
 #base directory
 #this finds the project root based on this script location
-#parents[2] means -> src/postprocessing/this_file.py -> capstone project root
+#parents[2] -> src/postprocessing/thisfile.py -> capstone project root
 BASE_DIR = Path(__file__).resolve().parents[2]
 
-#input directory for Azure OCR raw JSON files
-#expected file name format = bird_form_001_upper_read.json
+#input directory for Azure raw JSON files
+#expected file format = bird_form_001_upper_read.json
 INPUT_DIR = BASE_DIR / "data" / "azure_results"
 
-#output directory for simplified JSON files
+#output directory for simplified JSON
 #this is where final processed outputs will be stored
 OUTPUT_DIR = BASE_DIR / "data" / "simplified_outputs"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)  #create output folder if there is nothing
@@ -22,8 +21,8 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)  #create output folder if there is
 
 def discover_form_ids() -> list[str]:
 
-    #automatically find all available Azure raw JSON files
-    #if no form_id is given in command line, this function detects all forms
+    #automatically find all available Azure JSON files
+    #if no form_id is given in command, this function detects all
     #example file = bird_form_001_upper_read.json
     #output form_id = bird_form_001
 
@@ -36,14 +35,14 @@ def discover_form_ids() -> list[str]:
 #command line input
 #if user runs: python anchor_based_simplified_json.py bird_form_001 bird_form_002
 #then FORM_IDS = ["bird_form_001", "bird_form_002"]
-#if user runs without form_id, it automatically discovers all JSON files
+#if user runs without form_id, it automatically discovers all JSON
 FORM_IDS = sys.argv[1:] if len(sys.argv) > 1 else discover_form_ids()
 
 
 def load_json(path: Path) -> dict:
 
     #load Azure raw OCR JSON file
-    #returns Python dictionary so that we can access analyzeResult, pages, words, lines etc.
+    #returns Python dictionary
 
     with open(path, "r", encoding="utf-8") as file:
         return json.load(file)

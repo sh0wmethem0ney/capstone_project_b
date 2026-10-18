@@ -1,3 +1,4 @@
+
 from pathlib import Path
 import json
 import re
@@ -5,6 +6,7 @@ import sys
 from statistics import mean
 
 
+#project paths and ID
 BASE_DIR = Path(__file__).resolve().parents[2]
 
 FORM_ID = sys.argv[1] if len(sys.argv) > 1 else "bird_form_001"
@@ -18,15 +20,19 @@ OUTPUT_JSON = OUTPUT_DIR / f"{FORM_ID}_simplified.json"
 
 
 def load_azure_json(path: Path) -> dict:
+
+    #load Azure OCR results
     with open(path, "r", encoding="utf-8") as file:
         return json.load(file)
 
 
 def get_content(data: dict) -> str:
+    #get full OCR text
     return data.get("analyzeResult", {}).get("content", "")
 
 
 def get_words(data: dict) -> list[dict]:
+    #collect OCR words
     words = []
 
     pages = data.get("analyzeResult", {}).get("pages", [])
@@ -38,17 +44,16 @@ def get_words(data: dict) -> list[dict]:
 
 
 def avg_confidence_for_exact_words(words: list[dict], target_text: str):
-    
-    """
-    Estimate confidence by matching OCR words against the target value
-    """
 
+    #return no confidence for empty
     if not target_text:
         return None
 
+    #split extracted text into words
     target_parts = target_text.lower().split()
     matched_confidences = []
 
+    #find matching words and confidence scores
     for word in words:
         content = word.get("content", "").lower()
         if content in target_parts:
@@ -59,22 +64,21 @@ def avg_confidence_for_exact_words(words: list[dict], target_text: str):
     if not matched_confidences:
         return None
 
+    #calculate average confidence
     return round(mean(matched_confidences), 3)
 
 
 def create_flag(value, confidence):
 
-    """
-    initial uncertainty flag
-    (extraction-side flagging)
-    """
-
+    #flag empty or missing
     if value is None or value == "":
         return "blank_or_not_detected"
 
+    #flag values w/ confidence below 70%
     if confidence is not None and confidence < 0.7:
         return "low_accuracy"
 
+    #flag suspicious characters
     if "$" in value or "!" in value:
         return "possible_error"
 
@@ -82,66 +86,77 @@ def create_flag(value, confidence):
 
 
 def regex_search(pattern: str, text: str):
+
+    #search OCR text using a regex
+    #return the first value
     match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
     if match:
         return match.group(1).strip()
     return ""
 
 
-def extract_fields(content: str, words: list[dict]) -> dict:
-    """
-    Extract selected upper-section fields from OCR text.
-    This version is rule-based and designed for the upper field section crop.
-    """
+def extract_fields(content: str, words: list[dict]):
 
+    #extract member number after its label
     member_number = regex_search(r"MEMBER\s+NUMBER:?\s*\n?([0-9]{4,8})", content)
 
+    #extract number of species
     number_of_species_recorded = regex_search(
         r"SPECIES\s+RECORDED\s*\n?([0-9A-Za-z$]+)",
         content
     )
 
+    #extract observer name until next label
     name = regex_search(
         r"NAME:?\s*\n?(.+?)(?:\s+ADDRESS\.?|\s+GRID\s+REFERENCE)",
         content
     )
 
+    #remove spaces from the name
     name = re.sub(r"\s+", " ", name).strip()
 
+    #extract latitude and longitude using the expected OCR text order
     coordinate_block = re.search(
         r"Latitude\s+([0-9]{1,3})\s+([0-9]{1,2})\s+Degrees\s+\.?Mins\s+Longitude\s+([0-9]{1,3})\s+([0-9]{1,2})\s+Degrees\s+\.?Mins",
         content,
         re.IGNORECASE
     )
 
+    #assign coordinate values if the full pattern is found
     if coordinate_block:
         latitude_degrees = coordinate_block.group(1)
         latitude_minutes = coordinate_block.group(2)
         longitude_degrees = coordinate_block.group(3)
         longitude_minutes = coordinate_block.group(4)
     else:
+        #leave coordinates blank when the pattern is not found
         latitude_degrees = ""
         latitude_minutes = ""
         longitude_degrees = ""
         longitude_minutes = ""
 
+    #extract first observation date
     first_date = regex_search(
         r"First\s+Date\s+([0-9]{1,2}/[0-9]{1,2}/[0-9]{2,4})",
         content
     )
 
+    #extract last day as a date or numeric value
     last_day = regex_search(
         r"Last\s+Day\s+([0-9]{1,2}/[0-9]{1,2}/[0-9]{2,4}|[0-9]+)",
         content
     )
 
+    #extract location description until next label
     location_description = regex_search(
         r"Describe\s+location\s+precisely\.?\s*(.+?)(?:EMAIL|PERIOD|ADDRESS|Postcode)",
         content
     )
 
+    #remove unnecessary spaces
     location_description = re.sub(r"\s+", " ", location_description).strip()
 
+    #store the fields
     raw_fields = {
         "member_number": member_number,
         "number_of_species_recorded": number_of_species_recorded,
@@ -157,6 +172,7 @@ def extract_fields(content: str, words: list[dict]) -> dict:
 
     extracted_fields = {}
 
+    #add confidence and uncertainty flag to each extracted field
     for field_name, value in raw_fields.items():
         confidence = avg_confidence_for_exact_words(words, value)
         flag = create_flag(value, confidence)
@@ -171,10 +187,12 @@ def extract_fields(content: str, words: list[dict]) -> dict:
 
 
 def main():
+    #load OCR text and words
     data = load_azure_json(INPUT_JSON)
     content = get_content(data)
     words = get_words(data)
 
+    #create final simplified JSON
     simplified_output = {
         "form_id": FORM_ID,
         "source_file": f"{FORM_ID}.pdf",
@@ -191,6 +209,7 @@ def main():
         "extracted_fields": extract_fields(content, words)
     }
 
+    #save fields as simplified JSON
     with open(OUTPUT_JSON, "w", encoding="utf-8") as file:
         json.dump(simplified_output, file, indent=2, ensure_ascii=False)
 
