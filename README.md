@@ -197,5 +197,7 @@ raw form
 → field-level evaluation
 ```
 
+All function names are created based on American style writings. e.g. organization instead of organisation
+
 ## Not_in_use files
 This project contains several not_in_use files which was used. They are created for experimental purposes or to support future projects. They are described as not_in_use status in their names.
